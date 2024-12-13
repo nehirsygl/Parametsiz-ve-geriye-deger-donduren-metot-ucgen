@@ -1,0 +1,29 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp31
+{ /*Soru: Bir metot yazın; bu metot, kullanıcıdan üçgenin taban uzunluğu ve yüksekliğini alıp, üçgenin alanını hesaplayarak geriye döndürsün. 
+    Alanı hesaplamak için Taban * Yükseklik / 2 formülünü kullanın.İpucu: double türünde dönen bir metot tanımlamalı 
+    ve kullanıcıdan alınan değerlerle hesaplama yapmalısınız.*/
+
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            double alan = UcgenAlan();
+            Console.WriteLine("Üçgenin alanı: " + alan);
+        }
+        static double UcgenAlan() 
+        { 
+            Console.WriteLine("üçgenin taban uzunluğunu giriniz:"); 
+            double taban = double.Parse(Console.ReadLine()); 
+            Console.WriteLine(" üçgenin yüksekliğini giriniz:");
+            double yukseklik = double.Parse(Console.ReadLine());
+            double alan = taban * yukseklik / 2; 
+            return alan; 
+        }
+    }
+}
